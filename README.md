@@ -40,7 +40,7 @@ This tool only runs for **0.1 seconds** when you click "Paste Here", and then it
 | **📝 Text** | Copy Text -> Paste Here | **Saved as `.txt`** |
 | **📥 Link** | Copy File URL -> Paste Here | **Auto-Download to folder** |
 
-> **Smart Download (New in V3.3!)**: If you copy a direct download link (e.g. `http://.../video.mp4`), PasteHere will automatically download it to your current folder with a progress bar.
+> **Smart Download (New in V3.1!)**: If you copy a direct download link (e.g. `http://.../video.mp4`), PasteHere will automatically download it to your current folder with a progress bar.
 
 ---
 
@@ -64,3 +64,4 @@ Create a Shortcut: `Get Clipboard` -> `Get Contents of URL` -> `Save File`.
 
 ## 📄 License
 MIT License. Free to use and modify.
+
