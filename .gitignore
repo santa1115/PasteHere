@@ -1,0 +1,12 @@
+# Build results
+*.exe
+*.dll
+*.pdb
+
+# Keep the specific release if intended, but standard is to ignore.
+# Un-comment the next line if you want to commit the binary (not recommended for clean code repos, but good for simple tools)
+!PasteHere.exe
+
+# OS generated
+.DS_Store
+Thumbs.db
