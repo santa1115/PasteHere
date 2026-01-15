@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasteHere - The Missing "Paste to File" Tool</title>
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --text-color: #ffffff;
+            --accent: #3b82f6;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Gradient Background */
+        .bg-glow {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f1115 60%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 5rem 0 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.tagline {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+        }
+
+        .btn-secondary {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Problem vs Solution */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            text-align: left;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .old-way {
+            border-left: 4px solid #ef4444;
+        }
+
+        .new-way {
+            border-left: 4px solid #22c55e;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        footer {
+            margin-top: 4rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <header>
+            <h1>PasteHere</h1>
+            <p class="tagline">Stop "Saving As...". Just Paste.</p>
+            <div class="btn-group">
+                <a href="https://github.com/santa1115/PasteHere/releases" class="btn btn-primary">Download Free
+                    (v3.3)</a>
+                <a href="https://github.com/santa1115/PasteHere" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </header>
+
+        <section class="comparison">
+            <div class="card old-way">
+                <h2>❌ The Old Way</h2>
+                <p>1. Right-click "Save As..."</p>
+                <p>2. Find folder (Navigate...)</p>
+                <p>3. Save.</p>
+                <p>4. <b>Find folder again</b> to use it.</p>
+                <br>
+                <small style="color:#ef4444">Friction: High</small>
+            </div>
+            <div class="card new-way">
+                <h2>✅ The PasteHere Way</h2>
+                <p>1. Copy.</p>
+                <p>2. Go to folder -> <b>Paste Here</b>.</p>
+                <br>
+                <p><i>Done. The file is right where you need it.</i></p>
+                <br>
+                <small style="color:#22c55e">Friction: Zero</small>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <span class="icon">🖼️</span>
+                <h3>Smart Images</h3>
+                <p>Copy any image from Web or Screenshot. Paste as PNG safely.</p>
+            </div>
+            <div class="feature-item">
+                <span class="icon">📥</span>
+                <h3>URL Download</h3>
+                <p>Copy a file link. Paste to auto-download with progress bar.</p>
+            </div>
+            <div class="feature-item">
+                <span class="icon">⚡</span>
+                <h3>Zero Footprint</h3>
+                <p>No background process. 0% CPU. Only runs when you click.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Open Source Project. MIT License.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
