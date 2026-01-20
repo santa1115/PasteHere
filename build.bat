@@ -1,4 +1,8 @@
 @echo off
+:: PasteHere Build Script
+:: Uses the native .NET C# Compiler (csc.exe) to build a standalone executable.
+:: No External Dependencies required.
+
 setlocal
 
 :: Find latest .NET Framework path

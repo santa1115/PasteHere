@@ -1,3 +1,12 @@
+/*
+ * Project: PasteHere (Native Windows Implementation)
+ * Author: Hua & Antigravity
+ * License: MIT
+ * Description: A lightweight (13KB), native tool to paste clipboard content (Images, Text, Files) 
+ *              directly into the file system. Zero dependencies.
+ * repo: https://github.com/santa1115/PasteHere
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -79,7 +88,7 @@ namespace PasteHere
                         }
                     }
                 }
-                MessageBox.Show("Success! 'Paste Here' has been added to the right-click menu.", "Installed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Success! 'Paste Here' has been added to the right-click menu.\n\nAuthor: Hua", "Installed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

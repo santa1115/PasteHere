@@ -1,3 +1,12 @@
+/*
+ * Project: PasteHere (Native Windows Implementation) - Chinese Version
+ * Author: Hua & Antigravity
+ * License: MIT
+ * Description: A lightweight (13KB), native tool to paste clipboard content (Images, Text, Files) 
+ *              directly into the file system. Zero dependencies.
+ * repo: https://github.com/santa1115/PasteHere
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -36,7 +45,7 @@ namespace PasteHere
                 // Install/Uninstall Mode
                 DialogResult res = MessageBox.Show(
                     "本工具可以直接将剪贴板中的 [图片] 或 [文件链接] 粘贴为文件。\n\n" +
-                    "是否将 '在此处粘贴图片' 添加到右键菜单？\n\n" +
+                    "是否将 '粘贴文件' 添加到右键菜单？\n\n" +
                     "[是 Yes] - 安装\n[否 No] - 卸载\n[取消 Cancel] - 退出",
                     "Paste Here (安装程序 V3.3)",
                     MessageBoxButtons.YesNoCancel,
@@ -59,7 +68,7 @@ namespace PasteHere
             {
                 string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
                 string command = "\"" + exePath + "\" \"%V\"";
-                string menuName = "在此处粘贴图片";
+                string menuName = "粘贴文件";
 
                 string[] keys = {
                     @"Software\Classes\Directory\shell\PasteHere",

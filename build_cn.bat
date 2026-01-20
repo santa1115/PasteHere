@@ -1,4 +1,7 @@
 @echo off
+:: PasteHere Build Script (Chinese Version)
+:: Uses the native .NET C# Compiler (csc.exe) to build a standalone executable.
+
 setlocal
 
 :: Find latest .NET Framework path

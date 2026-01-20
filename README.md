@@ -32,6 +32,15 @@ This tool only runs for **0.1 seconds** when you click "Paste Here", and then it
 
 ---
 
+### 📚 Project Documentation
+We believe in transparent and high-quality open source.
+*   **[Product Journey](PRODUCT_JOURNEY.md)**: How we went from a Python Script to a Native App.
+*   **[Prompt Log](PROMPT_JOURNEY.md)**: The "AI Collaboration" process behind this tool.
+*   **[Changelog](CHANGELOG.md)**: Version history.
+*   **[Contributing](CONTRIBUTING.md)**: How to build and contribute.
+
+---
+
 ## ✨ Features (All-in-One)
 
 | content | Action | Result |

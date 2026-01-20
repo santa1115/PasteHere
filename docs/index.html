@@ -191,6 +191,29 @@
             display: block;
         }
 
+        /* CTA Section */
+        .cta {
+            margin-bottom: 4rem;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #24292e;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.2s;
+        }
+
+        .github-btn:hover {
+            background: #2f363d;
+        }
+
         footer {
             margin-top: 4rem;
             color: #64748b;
@@ -256,6 +279,24 @@
             </div>
         </section>
 
+        <section class="features">
+            <div class="feature-item">
+                <span class="icon">🖼️</span>
+                <h3>Smart Images</h3>
+                <p>Copy any image from Web or Screenshot. Paste as PNG safely.</p>
+            </div>
+            <div class="feature-item">
+                <span class="icon">📥</span>
+                <h3>URL Download</h3>
+                <p>Copy a file link. Paste to auto-download with progress bar.</p>
+            </div>
+            <div class="feature-item">
+                <span class="icon">⚡</span>
+                <h3>Zero Footprint</h3>
+                <p>No background process. 0% CPU. Only runs when you click.</p>
+            </div>
+        </section>
+
         <section class="usage">
             <h2>🚀 How to Use</h2>
             <div class="steps">
@@ -277,26 +318,18 @@
             </div>
         </section>
 
-        <section class="features">
-            <div class="feature-item">
-                <span class="icon">🖼️</span>
-                <h3>Smart Images</h3>
-                <p>Copy any image from Web or Screenshot. Paste as PNG safely.</p>
-            </div>
-            <div class="feature-item">
-                <span class="icon">📥</span>
-                <h3>URL Download</h3>
-                <p>Copy a file link. Paste to auto-download with progress bar.</p>
-            </div>
-            <div class="feature-item">
-                <span class="icon">⚡</span>
-                <h3>Zero Footprint</h3>
-                <p>No background process. 0% CPU. Only runs when you click.</p>
-            </div>
+        <section class="cta">
+            <p style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 1.5rem;">
+                Found this useful? <b>Awesome people Star the projects they love.</b>
+            </p>
+            <a href="https://github.com/santa1115/PasteHere" class="github-btn">
+                <span>⭐ Star on GitHub</span>
+            </a>
         </section>
 
         <footer>
-            <p>Open Source Project. MIT License. <br> Author: Hua</p>
+            <p>Open Source Project. MIT License.</p>
+            <p style="margin-top: 0.5rem; color: #94a3b8;">Created by <b>Hua</b></p>
         </footer>
     </div>
 </body>
